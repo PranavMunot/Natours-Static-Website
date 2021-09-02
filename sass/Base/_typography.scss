@@ -1,0 +1,72 @@
+body {
+  font-family: "lato", sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 2.5rem;
+  line-height: 1.7;
+  color: $color-grey-primary;
+}
+
+.textBox {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .headingPrimary {
+    color: $color-white;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 8rem;
+
+    .headingPrimaryMain {
+      display: block;
+      font-size: 8.2rem;
+      letter-spacing: 1.5rem;
+      animation: moveInLeft 1s ease-in-out forwards;
+    }
+    .headingPrimarySub {
+      display: block;
+      font-size: 3rem;
+      letter-spacing: 0.85rem;
+      animation: moveInRight 1s ease-in-out forwards;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  display: inline-block;
+  background: linear-gradient(
+    to right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: transparent;
+  letter-spacing: 0.2rem;
+  transition: all 0.2s;
+
+  &:hover {
+    transform: skewX(15deg) skewY(4deg);
+    text-shadow: 0.5rem 1rem 2rem rgba($color-black, $alpha: 0.2);
+  }
+}
+
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.para {
+  font-size: 1.6rem;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}

@@ -1,0 +1,45 @@
+.footer {
+  background-color: $color-grey-dark;
+  padding: 10rem 5rem;
+
+  &-name {
+    font-size: 2.5rem;
+    font-weight: bolder;
+  }
+
+  &-logo-box {
+    border-bottom: 1px solid rgba($color-grey-primary, 0.4);
+  }
+
+  &-nav-list {
+    list-style: none;
+
+    &-item {
+      display: inline-block;
+      //   margin: 5rem 0;
+      transition: all 0.3s;
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+      &:hover {
+        transform: rotate(10deg) scale(1.1);
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.4);
+      }
+    }
+  }
+  &-link {
+    font-size: 1.6rem;
+    color: $color-white;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+  &-copyright-text {
+    font-size: 1.6rem;
+    color: $color-white;
+  }
+}

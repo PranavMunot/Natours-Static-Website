@@ -1,0 +1,55 @@
+.story {
+  width: 75%;
+  margin: 0 auto;
+  box-shadow: 0rem 3rem 6rem rgba($color-black, 0.1);
+  background-color: rgba($color-white, 0.4);
+  padding: 6rem;
+  border-radius: 3px;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-shape {
+    width: 15rem;
+    height: 15rem;
+    position: relative;
+    display: flex;
+
+    .user-image {
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      backface-visibility: hidden;
+      flex: 1;
+      border-radius: 50%;
+    }
+    &-caption {
+      transition: all 0.4s;
+      text-transform: uppercase;
+      color: $color-white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, 20%);
+      opacity: 0;
+      backface-visibility: hidden;
+    }
+  }
+
+  &:hover &-shape-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+  &:hover .user-image {
+    // opacity: 0;
+    transform: scale(1.1);
+    filter: blur(0.2rem) brightness(50%);
+  }
+  &-text {
+    width: 100%;
+    padding-left: 2rem;
+    flex: 3;
+  }
+}
