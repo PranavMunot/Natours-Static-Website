@@ -205,6 +205,106 @@ body {
     font-size: 1.6rem;
     color: #fff; }
 
+.navigation-checkbox {
+  display: none; }
+  .navigation-checkbox:not(:checked) ~ .navigation-nav {
+    width: 0;
+    opacity: 0; }
+  .navigation-checkbox:not(:checked) ~ .navigation-bcg {
+    transform: scale(1); }
+  .navigation-checkbox:checked ~ .navigation-label > .dash {
+    background: transparent; }
+  .navigation-checkbox:checked ~ .navigation-label > .dash::after {
+    top: 0;
+    transform: rotate(-45deg); }
+  .navigation-checkbox:checked ~ .navigation-label > .dash::before {
+    top: 0;
+    transform: rotate(45deg); }
+
+.navigation-label {
+  background-color: #fff;
+  text-align: center;
+  width: 7rem;
+  height: 7rem;
+  position: fixed;
+  z-index: 100;
+  border-radius: 50%;
+  top: 6rem;
+  right: 6rem;
+  cursor: pointer; }
+  .navigation-label:hover > .dash::before {
+    transform: translateY(0.2rem); }
+  .navigation-label:hover > .dash::after {
+    transform: translateY(-0.2rem); }
+
+.navigation-bcg {
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  top: 6.5rem;
+  right: 6.5rem;
+  border-radius: 50%;
+  z-index: 50;
+  background: radial-gradient(#7ed56f, #28b485);
+  transform: scale(100);
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1); }
+
+.navigation-nav {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 75;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 1;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+
+.navigation-list {
+  list-style: none; }
+
+.navigation-item {
+  text-align: center; }
+
+.navigation-link:link, .navigation-link:visited {
+  display: inline-block;
+  text-transform: capitalize;
+  color: #fff;
+  padding: 1rem 2rem;
+  font-size: 4rem;
+  font-weight: 300;
+  text-decoration: none;
+  background: linear-gradient(120deg, transparent 50%, #fff 50%, #fff 100%);
+  background-size: 250%;
+  transition: all 0.5s; }
+
+.navigation-link:hover, .navigation-link:active {
+  background-position: 100%;
+  color: #28b485;
+  transform: translateX(-1rem); }
+
+.dash {
+  position: relative;
+  margin-top: 3.3rem; }
+  .dash, .dash::after, .dash::before {
+    width: 3rem;
+    height: 0.2rem;
+    display: inline-block;
+    background-color: #444; }
+  .dash::after, .dash::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    border-radius: 5rem;
+    transition: all 0.2s; }
+  .dash::before {
+    top: -0.8rem; }
+  .dash::after {
+    top: 0.8rem; }
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
